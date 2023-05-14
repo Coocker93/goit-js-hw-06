@@ -12,15 +12,15 @@ function onForm (event){
     event.preventDefault()
     const {email, password} = event.currentTarget.elements;
 
-    const dataUser = {
-        email: email.value,
-        password:password.value,
-    }
-    console.log(dataUser)
-
   if(!emailInput.value || !passwordInput.value){
     alert(`Fields are empty`)
     return
+  } else {
+    const dataUser = {
+      email: email.value,
+      password:password.value,
+  }
+  console.log(dataUser)
   }
 
  formEl.reset()

@@ -1,15 +1,16 @@
-const block = document.querySelector('.widget');
 const spanEl = document.querySelector('.color');
-const body = document.querySelector('body');
+const btnEl = document.querySelector('.change-color');
+const body = document.querySelector('body')
 
 
 
-block.addEventListener('click', onCick)
+btnEl.addEventListener('click', onCick)
 
 
 function onCick() {
-  body.style.backgroundColor = getRandomHexColor();
-  spanEl.textContent = getRandomHexColor();
+  const newColor = getRandomHexColor();
+  body.style.backgroundColor = newColor;
+  spanEl.textContent = newColor;
 }
 
 
